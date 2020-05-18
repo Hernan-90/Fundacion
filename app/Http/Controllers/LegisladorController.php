@@ -109,18 +109,19 @@ class LegisladorController extends Controller
         "nombre" => "string|min:1",
         "apellido" => "string|min:1",
         "email" => "string|email",
-        "telefono" => "integer|min:8",
+        "telefono" => "numeric|min:8",
         "direccion" => "string|min:1|max:255",
         "pais" => "string|min:1",
-        "votos" => "integer|min:1",
+        "votos" => "numeric|min:1",
         "partido" => "nullable"
       ];
       $messages = [
-        "string" => "El campo :attribute debe ser texto",
-        "integer" => "El campo :attribute debe ser numerico",
+        "string" => "(debe ser texto)",
+        "numeric" => "(debe ser numerico)",
+        "email" => "(debe contener un @)",
         // "unique" => "El campo :attribute se encuenta repetido en la base",
-        "min" => "El campo :attribute debe tener un minimo de :min caracteres",
-        "max" => "El campo :attribute debe tener un maximo de :max caracteres"
+        "min" => "(debe tener un minimo de :min caracteres)",
+        "max" => "(debe tener un maximo de :max caracteres)"
       ];
 
       $this->validate($request, $rules, $messages);

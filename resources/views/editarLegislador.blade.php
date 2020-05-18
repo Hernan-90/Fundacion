@@ -71,7 +71,7 @@
         </div>
         <div class="">
           <label class="mandato" for="">Mandato:<p>*</p></label>
-          <input id="mandato" type="date" name="mandato" value="">
+          <input id="mandato" type="date" name="mandato" value="{{$LegisladorAEditar->mandato}}">
         </div>
         {{-- <label for="">Automático:</label> --}}
         <input id="auto" type="hidden" name="auto" value="">
