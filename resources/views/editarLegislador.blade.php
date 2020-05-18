@@ -69,7 +69,7 @@
             <option value="verde">Verde</option>
           </select>
         </div>
-        <div class="">
+        <div class="mandatoC">
           <label class="mandato" for="">Mandato:<p>*</p></label>
           <input id="mandato" type="date" name="mandato" value="{{$LegisladorAEditar->mandato}}">
         </div>

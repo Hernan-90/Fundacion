@@ -65,7 +65,7 @@ form {
   width: 80%;
   padding: 5px;
 }
-.partidoC{
+.partidoC, .mandatoC{
   display: flex;
   flex-direction: row;
 }
