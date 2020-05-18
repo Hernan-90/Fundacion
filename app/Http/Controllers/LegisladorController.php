@@ -39,15 +39,15 @@ class LegisladorController extends Controller
         "nombre" => "string|min:1",
         "apellido" => "string|min:1",
         "email" => "string|email",
-        "telefono" => "integer|min:8",
+        "telefono" => "numeric|min:8",
         "direccion" => "string|min:1|max:255",
         "pais" => "string|min:1",
-        "votos" => "integer|min:1",
+        "votos" => "numeric|min:1",
         "partido" => "nullable"
       ];
       $messages = [
         "string" => "(debe ser texto)",
-        "integer" => "(debe ser numerico)",
+        "numeric" => "(debe ser numerico)",
         "email" => "(debe contener un @)",
         // "unique" => "El campo :attribute se encuenta repetido en la base",
         "min" => "(debe tener un minimo de :min caracteres)",
