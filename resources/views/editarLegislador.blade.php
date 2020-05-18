@@ -2,7 +2,7 @@
 
 @section('contenido')
   <h1>CARGUE LA NUEVA INFORMACION</h1>
-      <form id="formu" class="" action="/" method="post">
+      <form id="formu" class="" action="" method="post">
         @csrf
         <div class="nombreC">
           <label class="nombre" for="">Nombre: <p>*</p>
@@ -75,6 +75,7 @@
         </div>
         {{-- <label for="">Automático:</label> --}}
         <input id="auto" type="hidden" name="auto" value="">
+        <input type="hidden" name="id" value="{{$LegisladorAEditar->id}}">
         <div class="boton">
           <button id="btn" type="submit" name="button">Enviar</button>
         </div>

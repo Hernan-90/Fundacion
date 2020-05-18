@@ -17,7 +17,7 @@ class CreateLegisladoresTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->integer('telefono');
             $table->string('direccion');
             $table->string('pais');

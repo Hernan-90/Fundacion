@@ -105,13 +105,11 @@ class LegisladorController extends Controller
      */
     public function update(Request $request)
     {
-      $legislador = Legislador::find($request->id);
-
       $rules = [
         "nombre" => "string|min:1",
         "apellido" => "string|min:1",
         "email" => "string|email",
-        "telefono" => "integer|min:1|max:15",
+        "telefono" => "integer|min:8",
         "direccion" => "string|min:1|max:255",
         "pais" => "string|min:1",
         "votos" => "integer|min:1",
@@ -127,6 +125,7 @@ class LegisladorController extends Controller
 
       $this->validate($request, $rules, $messages);
 
+      $legislador = Legislador::find($request->id);
       $legislador->nombre = $request['nombre'];
       $legislador->apellido = $request['apellido'];
       $legislador->email = $request['email'];
